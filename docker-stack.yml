@@ -3,6 +3,7 @@ services:
   etcd:
     image: splazit/etcd-swarm
     deploy:
+      mode: global
       placement:
         constraints: [node.role ==  manager]
       update_config:
